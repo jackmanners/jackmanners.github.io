@@ -10,6 +10,22 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
+<script>
+$(document).ready(function(){
+  $("p").hide();
+  $("[id^=RA][id$=_H]").click(function(){
+    $(this).siblings("[id^=RA]:not([id$=_H])").show();
+    $(this).hide();
+  });
+  $("[id^=RA]:not([id$=_H])").click(function(){
+    $(this).siblings("[id^=RA][id$=_H]").show();
+    $(this).hide();
+  });
+});
+
+
+</script>
+
 <style>
 html,body,h1,h2,h3,h4,h5,h6 {
     font-family: "Roboto", sans-serif; 
@@ -17,64 +33,46 @@ html,body,h1,h2,h3,h4,h5,h6 {
 </style>
 </head>
 <body style="background-color:antiquewhite;">
-
+    <img src="media/jack_avatar.jpg" style="width: 25%; display: block; border-radius: 50%; margin: auto;" alt="Avatar">
+    <h1 style="text-align: center;">Jack Manners</h1>
 <!-- Page Container -->
-<div class="w3-content w3-margin-top" style="max-width:1400px; background-color:antiquewhite;">
-
-  <!-- The Grid -->
-  <div class="w3-row-padding">
-  
+<div class="w3-content" style="max-width:1400px; background-color:antiquewhite;">
     <!-- Header -->
-    <div class="w3-center">
-      <div class="w3-text-grey w3-card-4" style="background-color: white; height: 250px;">
-        <div class="w3-display-container" style="height: 250px">
-          <img src="media/jack_avatar.jpg" style="height: 100%; float:left;" alt="Avatar">
-          <div class="w3-display-bottomleft w3-container w3-text-teal">
-            <h2 style="color:white;">Jack Manners</h2>
-          </div>
-          <div style="text-align: center; display:grid; height: 250px;">
-           <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>PhD Candidate</p>
-           <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>Adelaide, AUS</p>
-           <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>JS.Manners@outlook.com</p>
-           
-          </div>
-        </div>
+    <div class="w3-center" style="height: 25px;">
+      <div class="w3-container w3-transparent w3-center w3-margin-top" style="display: inline-block; border-radius: 5px; height: 25px;">      
+        <a href="https://github.com/jackmanners"><i class="fa fa-github w3-hover-opacity"></i></a>
+        <a href="https://twitter.com/mannersjack"><i class="fa fa-twitter w3-hover-opacity"></i></a>
+        <a href="https://www.linkedin.com/in/jack-manners-85a79725a"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+      </div>
       </div><br>
     <!-- End Header -->
-    </div>
 
     <!-- Body -->
-    <div class="w3-center">
+    <div class="w3-center" style="max-width: 500px; margin: auto;">
     
       <div class="w3-container w3-card w3-white w3-margin-bottom">
         <h2 class="w3-text-grey w3-padding-16">
             <i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Work Experience</h2>
-
         <div class="w3-container">
             <h5 class="w3-opacity"><b>Research Assistant / FHMRI: Sleep Health</b></h5>
             <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Sep 2022 - Current</h6>
-            <p class="w3-hide">
-            Responsible for providing technical support and assistance with data acquisition for multiple research projects. 
-            This includes troubleshooting hardware and software issues, managing research data, and working with study participants to ensure accurate and reliable data collection for each project.
+            <h7 id="RA1_H">...</h7>
+            <p id="RA1">
+                Responsible for providing technical support and assistance with data acquisition for multiple research projects. 
+                This includes troubleshooting hardware and software issues, managing research data, and working with study participants to ensure accurate and reliable data collection for each project.
             </p>
             <hr>
         </div>
-        
-        <script>
-            $(document).ready(function() {
-                $('.w3-opacity').click(function() {
-                $(this).parent().find('p').toggle();
-                });
-            });
-        </script>
-          
-        
+    
         <div class="w3-container">
           <h5 class="w3-opacity"><b>Sleep Technician / FHMRI: Sleep Health</b></h5>
           <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Nov 2020 - Sep 2022</h6>
-          <p>Was responsible for conducting and assisting with sleep studies. 
+          <h7 id="RA2_H">...</h7>
+          <p id="RA2">
+            Was responsible for conducting and assisting with sleep studies.
             This involved monitoring and recording participants' sleep patterns and behaviors, setting up and maintaining sleep lab equipment, and collaborating with researchers to ensure the success of the study.
-        </p><br>
+          </p>
+        <hr>
         </div>
       </div>
 
@@ -158,15 +156,5 @@ html,body,h1,h2,h3,h4,h5,h6 {
   <!-- End Page Container -->
 </div>
 
-<footer class="w3-container w3-teal w3-center w3-margin-top">
-  <p>Find me on social media.</p>
-  <i class="fa fa-facebook-official w3-hover-opacity"></i>
-  <i class="fa fa-instagram w3-hover-opacity"></i>
-  <i class="fa fa-snapchat w3-hover-opacity"></i>
-  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-  <i class="fa fa-twitter w3-hover-opacity"></i>
-  <i class="fa fa-linkedin w3-hover-opacity"></i>
-  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
-</footer>
 </body>
 </html>
