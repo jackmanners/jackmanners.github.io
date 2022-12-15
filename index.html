@@ -13,13 +13,11 @@
 <script>
 $(document).ready(function(){
   $("p").hide();
-  $("[id^=RA][id$=_H]").click(function(){
-    $(this).siblings("[id^=RA]:not([id$=_H])").show();
+  
+  $("[id^=RA], [id^=E]").click(function(){
+    $(this).siblings("[id^=RA]:not([id$=_H]), [id^=E]:not([id$=_H])").show();
     $(this).hide();
-  });
-  $("[id^=RA]:not([id$=_H])").click(function(){
-    $(this).siblings("[id^=RA][id$=_H]").show();
-    $(this).hide();
+    $(this).siblings("[id^=RA][id$=_H], [id^=E][id$=_H]").show();
   });
 });
 
@@ -28,12 +26,17 @@ $(document).ready(function(){
 
 <style>
 html,body,h1,h2,h3,h4,h5,h6 {
-    font-family: "Roboto", sans-serif; 
-}
+  font-family: "Roboto", sans-serif;}
+p {
+  text-align: justify;}
+h6, body {
+  text-align: left;
+  justify-content: left;}
+
 </style>
 </head>
 <body style="background-color:antiquewhite;">
-    <img src="media/jack_avatar.jpg" style="width: 25%; display: block; border-radius: 50%; margin: auto;" alt="Avatar">
+    <img src="media/jack_avatar.jpg" style="width: 25%; display: block; border-radius: 50%; margin: auto; max-width: 300px;" alt="Avatar">
     <h1 style="text-align: center;">Jack Manners</h1>
 <!-- Page Container -->
 <div class="w3-content" style="max-width:1400px; background-color:antiquewhite;">
@@ -48,63 +51,61 @@ html,body,h1,h2,h3,h4,h5,h6 {
     <!-- End Header -->
 
     <!-- Body -->
-    <div class="w3-center" style="max-width: 500px; margin: auto;">
-    
-      <div class="w3-container w3-card w3-white w3-margin-bottom">
-        <h2 class="w3-text-grey w3-padding-16">
-            <i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Work Experience</h2>
-        <div class="w3-container">
-            <h5 class="w3-opacity"><b>Research Assistant / FHMRI: Sleep Health</b></h5>
-            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Sep 2022 - Current</h6>
-            <h7 id="RA1_H">...</h7>
-            <p id="RA1">
-                Responsible for providing technical support and assistance with data acquisition for multiple research projects. 
-                This includes troubleshooting hardware and software issues, managing research data, and working with study participants to ensure accurate and reliable data collection for each project.
-            </p>
-            <hr>
-        </div>
-    
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>Sleep Technician / FHMRI: Sleep Health</b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Nov 2020 - Sep 2022</h6>
-          <h7 id="RA2_H">...</h7>
-          <p id="RA2">
-            Was responsible for conducting and assisting with sleep studies.
-            This involved monitoring and recording participants' sleep patterns and behaviors, setting up and maintaining sleep lab equipment, and collaborating with researchers to ensure the success of the study.
+    <div style="width: 60%; margin: auto; max-width: 600px;">
+      <h2 class="w3-text-grey w3-padding-16" style="border-bottom: 1px solid grey;">
+          <i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Work Experience</h2>
+      <div class="w3-container">
+          <h5 class="w3-opacity"><b>Research Assistant / FHMRI: Sleep Health</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Sep 2022 - Current</h6>
+          <h7 id="RA1_H">...</h7>
+          <p id="RA1">
+              Responsible for providing technical support and assistance with data acquisition for multiple research projects. 
+              This includes troubleshooting hardware and software issues, managing research data, and working with study participants to ensure accurate and reliable data collection for each project.
           </p>
-        <hr>
-        </div>
+      </div>
+  
+      <div class="w3-container">
+        <h5 class="w3-opacity"><b>Sleep Technician / FHMRI: Sleep Health</b></h5>
+        <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Nov 2020 - Sep 2022</h6>
+        <h7 id="RA2_H">...</h7>
+        <p id="RA2">
+          Responsible for conducting and assisting with sleep studies.
+          This involved monitoring and recording participants' sleep patterns and behaviors, setting up and maintaining sleep lab equipment, and collaborating with researchers to ensure the success of the study.
+        </p>
+      <hr>
       </div>
 
-      <div class="w3-container w3-card w3-white">
-        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-graduation-cap fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Education</h2>
+        <h2 class="w3-text-grey w3-padding-16" style="border-bottom: 1px solid grey;">
+          <i class="fa fa-graduation-cap fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Education</h2>
         <div class="w3-container">
           <h5 class="w3-opacity"><b>PhD in Psychology / Flinders University</b></h5>
           <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2021 - Current</h6>
-          <p>
+          <h7 id="E1_H">...</h7>
+          <p id="E1">
             Focusing on the impact of sleep and shift-work on cognitive performance using wearable and nearable technology. 
             My research aims to understand how these factors can be optimised to improve the daily functioning of individuals with non-traditional work schedules.
-          </p><hr>
+          </p>
         </div>
         <div class="w3-container">
           <h5 class="w3-opacity"><b>Honours in Psychology / Flinders University</b></h5>
           <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2013 - 2015</h6>
-          <p>Master Degree</p>
-          <hr>
+          <h7 id="E2_H">...</h7>
+          <p id="E2">WIND FARMS</p>
         </div>
         <div class="w3-container">
           <h5 class="w3-opacity"><b>BBSc (Psychology) / Flinders University</b></h5>
           <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2010 - 2013</h6>
-          <p>Bachelor Degree</p><br>
+          <h7 id="E3_H">...</h7>
+          <p id="E3">Bachelor Degree</p><br>
         </div>
-      </div>
 
-      <div class="w3-container w3-card w3-white">
-        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-book fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Publications</h2>
+        <h2 class="w3-text-grey w3-padding-16" style="border-bottom: 1px solid grey;">
+          <i class="fa fa-book fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Publications</h2>
         <div class="w3-container">
           <h5 class="w3-opacity"><b>PhD in Psychology / Flinders University</b></h5>
           <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2021 - Current</h6>
-          <p>
+          <h7 id="P1_H">...</h7>
+          <p id="P1">
             Focusing on the impact of sleep and shift-work on cognitive performance using wearable and nearable technology. 
             My research aims to understand how these factors can be optimised to improve the daily functioning of individuals with non-traditional work schedules.
           </p>
@@ -121,10 +122,9 @@ html,body,h1,h2,h3,h4,h5,h6 {
           <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2010 - 2013</h6>
           <p>Bachelor Degree</p><br>
         </div>
-      </div>
 
-      <div class="w3-container w3-card w3-white">
-        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Awards</h2>
+        <h2 class="w3-text-grey w3-padding-16" style="border-bottom: 1px solid grey;">
+          <i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Awards</h2>
         <div class="w3-container">
           <h5 class="w3-opacity"><b>PhD in Psychology / Flinders University</b></h5>
           <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2021 - Current</h6>
@@ -146,10 +146,6 @@ html,body,h1,h2,h3,h4,h5,h6 {
           <p>Bachelor Degree</p><br>
         </div>
       </div>
-
-    <!-- End Body -->
-    </div>
-    
   <!-- End Grid -->
   </div>
   
