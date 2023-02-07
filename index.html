@@ -7,10 +7,11 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
-<script>
+<!-- <script>
 $(document).ready(function(){
   $("p").hide();
   
@@ -20,134 +21,113 @@ $(document).ready(function(){
     $(this).siblings("[id^=RA][id$=_H], [id^=E][id$=_H]").show();
   });
 });
+</script> -->
 
-
+<script>
+function includeHTML() {
+  var z, i, elmnt, file, xhttp;
+  /* Loop through a collection of all HTML elements: */
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute("w3-include-html");
+    if (file) {
+      /* Make an HTTP request using the attribute value as the file name: */
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /* Remove the attribute, and call this function once more: */
+          elmnt.removeAttribute("w3-include-html");
+          includeHTML();
+        }
+      }
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /* Exit the function: */
+      return;
+    }
+  }
+}
 </script>
 
 <style>
 html,body,h1,h2,h3,h4,h5,h6 {
-  font-family: "Roboto", sans-serif;}
+  font-family: andale mono, monospace;}
 p {
-  text-align: justify;}
+  text-align: left;}
 h6, body {
   text-align: left;
   justify-content: left;}
 
 </style>
+
 </head>
 <br>
-<body style="background-color:#EAD2BE;">
+<body style="background-color: #dedede;">
     <img src="media/jack_avatar.jpg" style="width: 25%; display: block; border-radius: 50%; margin: auto; max-width: 300px;" alt="Avatar">
-    <h1 style="text-align: center;">Jack Manners</h1>
+    <h1 style="text-align: center; color: black;"><b></b>Jack Manners</h1>
 <!-- Page Container -->
 <div class="w3-content" style="max-width:1400px;">
     <!-- Header -->
     <div class="w3-center" style="height: 25px;">
       <div class="w3-container w3-transparent w3-center w3-margin-top" style="display: inline-block; border-radius: 5px; height: 25px;">      
-        <a href="https://github.com/jackmanners"><i class="fa fa-github w3-hover-opacity"></i></a>
-        <a href="https://twitter.com/mannersjack"><i class="fa fa-twitter w3-hover-opacity"></i></a>
-        <a href="https://www.linkedin.com/in/jack-manners-85a79725a"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+        <button class="btn btn-primary" style="background-color: #49a8c2; border: none;" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+          Contact Details
+        </button>
       </div>
-      </div><br>
+      </div>
+      <br><br>
     <!-- End Header -->
 
     <!-- Body -->
     <div style="width: 60%; margin: auto; max-width: 600px;">
-      <h2 class="w3-text-grey w3-padding-16" style="border-bottom: 1px solid grey;">
-          <i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge" style="color:#298CA7;"></i>Work Experience</h2>
-      <div class="w3-container">
-          <h5 class="w3-opacity"><b>Research Assistant / FHMRI: Sleep Health</b></h5>
-          <h6 style="color:#298CA7;"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Sep 2022 - Current</h6>
-          <h7 id="RA1_H">...</h7>
-          <p id="RA1">
-              Responsible for providing technical support and assistance with data acquisition for multiple research projects. 
-              This includes troubleshooting hardware and software issues, managing research data, and working with study participants to ensure accurate and reliable data collection for each project.
-          </p>
-      </div>
-  
-      <div class="w3-container">
-        <h5 class="w3-opacity"><b>Sleep Technician / FHMRI: Sleep Health</b></h5>
-        <h6 style="color:#298CA7;"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Nov 2020 - Sep 2022</h6>
-        <h7 id="RA2_H">...</h7>
-        <p id="RA2">
-          Responsible for conducting and assisting with sleep studies.
-          This involved monitoring and recording participants' sleep patterns and behaviors, setting up and maintaining sleep lab equipment, and collaborating with researchers to ensure the success of the study.
-        </p>
-      </div>
-
-        <h2 class="w3-text-grey w3-padding-16" style="border-bottom: 1px solid grey;">
-          <i class="fa fa-graduation-cap fa-fw w3-margin-right w3-xxlarge" style="color:#298CA7;"></i>Education</h2>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>PhD in Psychology / Flinders University</b></h5>
-          <h6 style="color:#298CA7;"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2021 - Current</h6>
-          <h7 id="E1_H">...</h7>
-          <p id="E1">
-            Focusing on the impact of sleep and shift-work on cognitive performance using wearable and nearable technology. 
-            My research aims to understand how these factors can be optimised to improve the daily functioning of individuals with non-traditional work schedules.
-          </p>
-        </div>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>Honours in Psychology / Flinders University</b></h5>
-          <h6 style="color:#298CA7;"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2013 - 2015</h6>
-          <h7 id="E2_H">...</h7>
-          <p id="E2">WIND FARMS</p>
-        </div>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>BBSc (Psychology) / Flinders University</b></h5>
-          <h6 style="color:#298CA7;"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2010 - 2013</h6>
-          <h7 id="E3_H">...</h7>
-          <p id="E3">Bachelor Degree</p><br>
-        </div>
-
-        <h2 class="w3-text-grey w3-padding-16" style="border-bottom: 1px solid grey;">
-          <i class="fa fa-book fa-fw w3-margin-right w3-xxlarge" style="color:#298CA7;"></i>Publications</h2>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>PhD in Psychology / Flinders University</b></h5>
-          <h6 style="color:#298CA7;"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2021 - Current</h6>
-          <h7 id="P1_H">...</h7>
-          <p id="P1">
-            Focusing on the impact of sleep and shift-work on cognitive performance using wearable and nearable technology. 
-            My research aims to understand how these factors can be optimised to improve the daily functioning of individuals with non-traditional work schedules.
-          </p>
-        </div>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>Honours in Psychology / Flinders University</b></h5>
-          <h6 style="color:#298CA7;"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2013 - 2015</h6>
-          <p>Master Degree</p>
-          <hr>
-        </div>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>BBSc (Psychology) / Flinders University</b></h5>
-          <h6 style="color:#298CA7;"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2010 - 2013</h6>
-          <p>Bachelor Degree</p><br>
-        </div>
-
-        <h2 class="w3-text-grey w3-padding-16" style="border-bottom: 1px solid grey;">
-          <i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge" style="color:#298CA7;"></i>Awards</h2>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>PhD in Psychology / Flinders University</b></h5>
-          <h6 style="color:#298CA7;"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2021 - Current</h6>
-          <p>
-            Focusing on the impact of sleep and shift-work on cognitive performance using wearable and nearable technology. 
-            My research aims to understand how these factors can be optimised to improve the daily functioning of individuals with non-traditional work schedules.
-          </p>
-        </div>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>Honours in Psychology / Flinders University</b></h5>
-          <h6 style="color:#298CA7;"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2013 - 2015</h6>
-          <p>Master Degree</p>
-        </div>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>BBSc (Psychology) / Flinders University</b></h5>
-          <h6 style="color:#298CA7;"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2010 - 2013</h6>
-          <p>Bachelor Degree</p><br>
-        </div>
-      </div>
+      <div w3-include-html="work.html"></div>
+      <div w3-include-html="education.html"></div>
+      <div w3-include-html="research.html"></div>
+    </div>
   <!-- End Grid -->
   </div>
   
   <!-- End Page Container -->
 </div>
-
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Jack Manners</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div style="border-bottom: 1px solid grey;">
+      Adelaide Institute for Sleep Health<br>
+      (FHMRI: Sleep Health)<br><br>
+      2A, Mark Oliphant Building <br>
+      5 Laffer Drive, Bedford Park 5042<br>
+    </div><br>
+    <div>
+      <a href="mailto:jack.manners@flinders.edu.au" style="text-decoration: none;"><i class="fa fa-envelope w3-hover-opacity"></i> jack.manners@flinders.edu.au</a><br>
+      <a href="https://github.com/jackmanners" style="text-decoration: none;"><i class="fa fa-github w3-hover-opacity"></i> Github</a><br>
+      <a href="https://twitter.com/mannersjack" style="text-decoration: none;"><i class="fa fa-twitter w3-hover-opacity"></i> Twitter</a><br>
+      <a href="https://www.linkedin.com/in/jack-manners-85a79725a" style="text-decoration: none;"><i class="fa fa-linkedin w3-hover-opacity"></i> LinkedIn</a><br>
+      <a href="https://www.researchgate.net/profile/Jack_Manners4" style="text-decoration: none;"><i class="fa fa-book w3-hover-opacity"></i> ResearchGate</a>
+      
+    </div>
+    <!-- <div class="dropdown mt-3">
+      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+        Dropdown button
+      </button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" href="#">Something else here</a></li>
+      </ul>
+    </div> -->
+  </div>
+</div>
+<script>
+  includeHTML();
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 </body>
 </html>
