@@ -66,14 +66,25 @@ h6, body {
 
 </head>
 <br>
-<body style="background-color: #dedede;">
+<body id="top" style="background-color: #dedede;">
     <img src="media/jack_avatar.jpg" style="width: 25%; display: block; border-radius: 50%; margin: auto; max-width: 300px;" alt="Avatar">
-    <h1 style="text-align: center; color: black;"><b></b>Jack Manners</h1>
+    <h1 style="text-align: center; color: black;">Jack Manners</h1>
 <!-- Page Container -->
 <div class="w3-content" style="max-width:1400px;">
   <!-- Header -->
   <div class="w3-center" style="height: 25px;">
     <div class="w3-container w3-transparent w3-center w3-margin-top" style="display: inline-block; border-radius: 5px; height: 25px;">      
+      <ul class="nav nav-pills">
+        <li class="nav-item">
+          <a class="nav-link" style="color: #49a8c2;" href="#work">Work</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" style="color: #49a8c2;" href="#education">Education</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" style="color: #49a8c2;" href="#research">Research</a>
+        </li>
+      </ul>
       <button class="btn btn-primary" style="background-color: #49a8c2; border: none;" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
         Contact Details
       </button>
@@ -81,51 +92,27 @@ h6, body {
     </div>
     <br><br>
   <!-- End Header -->
-
+  <br>
   <!-- Body -->
-  <div style="width: 80%; margin: auto; max-width: 800px;">
+  <div data-bs-spy="scroll" data-bs-target="#navbar" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example p-3 rounded-2" tabindex="0" style="width: 80%; margin: auto; max-width: 800px;">
     <div w3-include-html="work.html"></div>
     <div w3-include-html="education.html"></div>
     <div w3-include-html="research.html"></div>
+    <a href="#top" style="text-decoration: none; color: #49a8c2;"><p style="text-align: right; text-decoration: none;">
+      TOP
+    </p></a>
   </div>
   <!-- End Body -->
 <!-- End Grid -->
 </div>
-  
-  <!-- End Page Container -->
+
+
+
+<!-- End Page Container -->
 </div>
-<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-  <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Jack Manners</h5>
-    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-  </div>
-  <div class="offcanvas-body">
-    <div style="border-bottom: 1px solid grey;">
-      Adelaide Institute for Sleep Health<br>
-      (FHMRI: Sleep Health)<br><br>
-      2A, Mark Oliphant Building <br>
-      5 Laffer Drive, Bedford Park 5042<br>
-    </div><br>
-    <div>
-      <a href="mailto:jack.manners@flinders.edu.au" style="text-decoration: none;"><i class="fa fa-envelope w3-hover-opacity"></i> jack.manners@flinders.edu.au</a><br>
-      <a href="https://github.com/jackmanners" style="text-decoration: none;"><i class="fa fa-github w3-hover-opacity"></i> Github</a><br>
-      <a href="https://twitter.com/mannersjack" style="text-decoration: none;"><i class="fa fa-twitter w3-hover-opacity"></i> Twitter</a><br>
-      <a href="https://www.linkedin.com/in/jack-manners-85a79725a" style="text-decoration: none;"><i class="fa fa-linkedin w3-hover-opacity"></i> LinkedIn</a><br>
-      <a href="https://www.researchgate.net/profile/Jack_Manners4" style="text-decoration: none;"><i class="fa fa-book w3-hover-opacity"></i> ResearchGate</a>
-      
-    </div>
-    <!-- <div class="dropdown mt-3">
-      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
-        Dropdown button
-      </button>
-      <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="#">Action</a></li>
-        <li><a class="dropdown-item" href="#">Another action</a></li>
-        <li><a class="dropdown-item" href="#">Something else here</a></li>
-      </ul>
-    </div> -->
-  </div>
-</div>
+
+<div w3-include-html="offCanvas.html"></div>
+
 <script>
   includeHTML();
 </script>
