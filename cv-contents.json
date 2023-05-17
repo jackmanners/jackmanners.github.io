@@ -1,0 +1,62 @@
+{
+    "workExperience": [
+      {
+        "position": "Research Assistant | FHMRI: Sleep Health",
+        "date": "Sep 2022 - Current",
+        "description": "Acquiring and managing data for multiple research projects. Developing and maintaining bespoke API and databases."
+      },
+      {
+        "position": "Sleep Technician | FHMRI: Sleep Health",
+        "date": "Nov 2020 - Sep 2022",
+        "description": "Conducting and assisting with sleep studies involving polysomnography, consumer devices, and health and cognitive testing."
+      }
+    ],
+    "education": [
+        {
+          "degree": "PhD in Sleep Psychology",
+          "university": "Flinders University",
+          "date": "2021 - Current",
+          "description": "Focusing on the impact of sleep and shift-work on cognitive performance using wearable and nearable technology. My research aims to understand how these factors can be measured to assist in predicting safety-critical workplace functioning."
+        },
+        {
+          "degree": "Honours in Psychology",
+          "university": "Flinders University",
+          "date": "2013 - 2015",
+          "description": "Collaborated on government-funded Wind Farm Noise Study at Flinders University, specifically looking at actigraphic symptoms of insomnia relative to wind-turbine proximity. Graduated with First-Class Honours & University Medal."
+        },
+        {
+          "degree": "BBSc (Psychology)",
+          "university": "Flinders University",
+          "date": "2010 - 2013",
+          "description": "Bachelor of Behavioural Science (Psychology). Dual-major in psychology and philosophy. Graduated with Chancellor's Letter of Commendation."
+        }
+    ],
+    "research": [
+        {
+          "link": "https://doi.org/10.1111/jsr.13717",
+          "title": "[1] Manners et al. (2022)",
+          "description": "The Good Sleeper Scale-15 items: a questionnaire for the standardised assessment of good sleepers."
+        },
+        {
+          "link": "https://doi.org/10.1093/sleepadvances/zpac029.142",
+          "title": "[2] Manners et al. (2022)",
+          "description": "Predicting vigilance in a shift-work context with under-mattress sensor data from the preceding sleep."
+        },
+        {
+          "link": "https://doi.org/10.1093/sleepadvances/zpac029.020",
+          "title": "[3] Guyett et al. (2022)",
+          "description": "Investigation of a novel LED lighting strategy designed to accelerate circadian entrainment to night shift-work in an encapsulated environment."
+        },
+        {
+          "link": "https://doi.org/10.1093/sleepadvances/zpac029.186",
+          "title": "[4] Stuart et al. (2022)",
+          "description": "A pilot study of a novel electrode system for brainwave acquisition during sleep: Tripolar Concentric Ring Electrodes."
+        },
+        {
+          "link": "https://doi.org/10.1016/j.sleep.2022.10.030",
+          "title": "[5] Scott et al. (2022)",
+          "description": "Emerging applications of objective sleep assessments towards the improved management of insomnia."
+        }
+    ]
+  }
+  
