@@ -39,3 +39,22 @@
     transform: rotate(360deg);
   }
 }
+
+/* Add style to make all scrollbars slightly thinner and rounded */
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+  border-radius: 4px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
