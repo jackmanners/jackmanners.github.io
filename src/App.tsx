@@ -19,7 +19,7 @@ function App() {
         <Route path="" element={<Home />} />
         <Route path="/projects" element={<div>About</div>} />
         <Route path="/contact" element={<div>Contact</div>} />
-        <Route path="/projects/undermattressvalidation" element={<ExternalRedirect url="https://researchnow.flinders.edu.au/en/persons/jack-manners" />} />
+        <Route path="/projects/undermattressvalidation" element={<ExternalRedirect url="https://doi.org/10.1101/2024.09.09.24312921" />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </Router>
