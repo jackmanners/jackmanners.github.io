@@ -8,7 +8,11 @@
   <script type="text/javascript">
     // Redirect all 404 requests back to the index.html with the original path
     var pathname = window.location.pathname;
-    window.location.replace("/?" + pathname);
+    // if '/projects/**' redirect to '/**'
+    if (pathname.startsWith('/projects/')) {
+      pathname = pathname.replace('/projects', '');
+    }
+    window.location.replace(pathname);
   </script>
 </head>
 <body>
